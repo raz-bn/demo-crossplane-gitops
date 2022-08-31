@@ -1,0 +1,17 @@
+apiVersion: aps.894.crossplane.io/v1alpha1
+kind: ClusterInstance
+metadata:
+  namespace: default
+  name: crossplane-demo
+spec:
+  parameters:
+    region: "gofra"
+    version: "4.11"
+    nodePools:
+      - name: razi
+        size:
+          cores: 2
+          memory: "4Gi"
+        nodeCount: 1
+  writeConnectionSecretToRef:
+    name: crossplane-demo-kubeconfig
