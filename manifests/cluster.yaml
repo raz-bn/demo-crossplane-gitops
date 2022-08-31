@@ -12,6 +12,6 @@ spec:
         size:
           cores: 2
           memory: "4Gi"
-        nodeCount: 1
+        nodeCount: 2
   writeConnectionSecretToRef:
     name: crossplane-demo-kubeconfig
